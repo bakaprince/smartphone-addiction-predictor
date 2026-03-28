@@ -53,15 +53,15 @@ python -m pip install -r requirements.txt
 ## Running the Project
 
 ### Q11. How do I train the model?
-**A:** Run: `python train.py`
+**A:** Run: `python src/train.py`
 
 Takes ~5-10 seconds and creates the `models/` folder with trained artifacts.
 
 ### Q12. Can I skip training and just predict?
-**A:** No, you need to train first to generate the model files. Just run `python train.py` once.
+**A:** No, you need to train first to generate the model files. Just run `python src/train.py` once.
 
 ### Q13. How do I make predictions?
-**A:** Run: `python predict.py`
+**A:** Run: `python src/predict.py`
 
 Then answer questions about your phone habits interactively.
 
@@ -198,7 +198,7 @@ pip install -r requirements.txt
 ### Q38. "Models not found" when predicting
 **A:** Run training first:
 ```bash
-python train.py
+python src/train.py
 ```
 
 ### Q39. Jupyter notebook won't start
@@ -212,7 +212,7 @@ Then open: `http://localhost:8889`
 ### Q40. Program runs but gives wrong predictions
 **A:** Check:
 - Are you providing accurate inputs?
-- Did you train the model with `python train.py`?
+- Did you train the model with `python src/train.py`?
 - All input ranges correct (0-24 for hours, 0-1000 for notifications)?
 
 ---
@@ -253,7 +253,7 @@ github.com/yourusername/smartphone-addiction-predictor
 - **[README.md](README.md)** - Quick start and troubleshooting
 - **[PROJECT_REPORT.md](PROJECT_REPORT.md)** - Technical documentation
 - **[INDEX.md](INDEX.md)** - Documentation guide
-- **Code comments** in `train.py` and `predict.py`
+- **Code comments** in `src/train.py` and `src/predict.py`
 - **Jupyter notebook** in `notebook/analysis.ipynb`
 
 ## Learning & Resources

@@ -8,7 +8,7 @@ Your complete guide to the Smartphone Addiction Predictor project. Start here!
 
 ### Start With These
 
-1. **[README.md](README.md)** ⭐ START HERE
+1. **[README.md](../README.md)** ⭐ START HERE
    - What is the project?
    - How it works
    - Quick start (5 minutes)
@@ -52,13 +52,13 @@ Your complete guide to the Smartphone Addiction Predictor project. Start here!
 ## 🎯 By Your Use Case
 
 ### "I just want to try it"
-1. Read [README.md](README.md)
+1. Read [README.md](../README.md)
 2. Follow README installation steps
-3. Run `python predict.py`
+3. Run `python src/predict.py`
 4. Done! ✅
 
 ### "I want to understand it"
-1. Read [README.md](README.md)
+1. Read [README.md](../README.md)
 2. Read [PROJECT_REPORT.md](PROJECT_REPORT.md)
 3. Open `notebook/analysis.ipynb` in Jupyter
 4. Explore the code comments
@@ -81,16 +81,13 @@ Your complete guide to the Smartphone Addiction Predictor project. Start here!
 📁 smartphone-addiction-predictor/
 │
 ├── 📄 README.md                    ⭐ Start here
-├── 📄 PROJECT_REPORT.md            Technical details
-├── 📄 FAQ.md                       Common questions
-├── 📄 INDEX.md                     This file
-│
 ├── 📄 LICENSE                      MIT License
 ├── 📄 requirements.txt              Python dependencies
 ├── 📄 .gitignore                   Git configuration
 │
-├── 🐍 train.py                     Train the model
-├── 🐍 predict.py                   Make predictions
+├── 🐍 src/
+│   ├── train.py                    Train the model
+│   └── predict.py                  Make predictions
 │
 ├── 📁 data/
 │   └── 📊 data.csv                 7,500 training records
@@ -100,8 +97,14 @@ Your complete guide to the Smartphone Addiction Predictor project. Start here!
 │   ├── scaler.pkl                  Feature scaler
 │   └── features.pkl                Feature list
 │
-└── 📁 notebook/
-    └── 📓 analysis.ipynb           Data exploration
+├── 📁 notebook/
+│   └── 📓 analysis.ipynb           Data exploration
+│
+└── 📁 docs/
+    ├── 📄 PROJECT_REPORT.md        Technical details
+    ├── 📄 FAQ.md                   Common questions
+    ├── 📄 INDEX.md                 This file
+    └── 📄 PROJECT_STRUCTURE.md     Structure overview
 ```
 
 ---
@@ -111,19 +114,19 @@ Your complete guide to the Smartphone Addiction Predictor project. Start here!
 ### Setup (First Time)
 ```bash
 pip install -r requirements.txt
-python train.py
+python src/train.py
 ```
 
 ### Regular Usage
 ```bash
-python predict.py              # Make predictions
+python src/predict.py          # Make predictions
 jupyter notebook notebook/     # Explore data
 ```
 
 ### Troubleshooting
 ```bash
 pip install -r requirements.txt --upgrade  # Reinstall
-python train.py                            # Retrain model
+python src/train.py                        # Retrain model
 python --version                           # Check Python
 ```
 
@@ -133,15 +136,15 @@ python --version                           # Check Python
 
 ### Level 1: Beginner 👶
 - [ ] Read README.md
-- [ ] Run python predict.py
+- [ ] Run `python src/predict.py`
 - [ ] Try a few predictions
 - [ ] Check FAQ.md for questions
 
 ### Level 2: Intermediate 🤓
 - [ ] Read PROJECT_REPORT.md
 - [ ] Open notebook/analysis.ipynb
-- [ ] Read train.py code
-- [ ] Read predict.py code
+- [ ] Read src/train.py code
+- [ ] Read src/predict.py code
 - [ ] Understand the model architecture
 
 ### Level 3: Advanced 🔬
@@ -185,8 +188,8 @@ python --version                           # Check Python
 
 ### Understanding It
 - [PROJECT_REPORT.md](PROJECT_REPORT.md) - Full technical details
-- [notebook/analysis.ipynb](notebook/analysis.ipynb) - Live exploration
-- Code comments in train.py and predict.py
+- [notebook/analysis.ipynb](../notebook/analysis.ipynb) - Live exploration
+- Code comments in `src/train.py` and `src/predict.py`
 
 ### Customization
 - [FAQ.md](FAQ.md) - "Can I modify..."
@@ -219,10 +222,10 @@ python --version                           # Check Python
 
 ## ✅ Checklist for Getting Started
 
-- [ ] Read [README.md](README.md)
+- [ ] Read [README.md](../README.md)
 - [ ] Run `pip install -r requirements.txt`
-- [ ] Run `python train.py`
-- [ ] Run `python predict.py`
+- [ ] Run `python src/train.py`
+- [ ] Run `python src/predict.py`
 - [ ] Read [FAQ.md](FAQ.md) for your questions
 - [ ] Explore code comments
 - [ ] Try the Jupyter notebook
@@ -243,7 +246,7 @@ python --version                           # Check Python
 ## 🎯 Next Steps
 
 1. **If you haven't started:**
-   → Read [README.md](README.md)
+   → Read [README.md](../README.md)
 
 2. **If you're using it:**
    → Bookmark this page for quick navigation

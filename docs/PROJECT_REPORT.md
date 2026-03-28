@@ -190,25 +190,31 @@ Total      1380           1420
 
 ```
 smartphone-addiction-predictor/
-├── train.py              # Model training pipeline
-├── predict.py            # Interactive prediction tool
+├── src/
+│   ├── train.py              # Model training pipeline
+│   └── predict.py            # Interactive prediction tool
 ├── data/
-│   └── data.csv          # Training dataset
+│   └── data.csv              # Training dataset
 ├── models/               # (Generated after training)
 │   ├── addiction_model.pkl
 │   ├── scaler.pkl
 │   └── features.pkl
 ├── notebook/
-│   └── analysis.ipynb    # Data exploration
+│   └── analysis.ipynb        # Data exploration
+├── docs/
+│   ├── PROJECT_REPORT.md     # This file
+│   ├── FAQ.md                # Common questions
+│   ├── INDEX.md              # Documentation index
+│   └── PROJECT_STRUCTURE.md  # Structure overview
 ├── README.md             # Main documentation
 ├── requirements.txt      # Dependencies
 ├── .gitignore            # Git configuration
-└── PROJECT_REPORT.md     # This file
+└── LICENSE               # MIT License
 ```
 
 ### Code Organization
 
-**train.py** (300+ lines)
+**train.py** (`src/train.py`, 300+ lines)
 - `load_data()` - Load CSV
 - `preprocess_data()` - Clean & encode
 - `select_features()` - Choose 12 features
@@ -217,7 +223,7 @@ smartphone-addiction-predictor/
 - `save_model()` - Serialize to disk
 - `main()` - Orchestrate pipeline
 
-**predict.py** (250+ lines)
+**predict.py** (`src/predict.py`, 250+ lines)
 - `AddictionPredictor` class
 - `__init__()` - Load saved model
 - `get_user_input()` - Interactive input
@@ -233,7 +239,7 @@ smartphone-addiction-predictor/
 ### Training
 
 ```bash
-python train.py
+python src/train.py
 ```
 
 **Output:**
@@ -250,7 +256,7 @@ python train.py
 ### Making Predictions
 
 ```bash
-python predict.py
+python src/predict.py
 ```
 
 **Interactive Flow:**
@@ -379,7 +385,7 @@ Top factors influencing addiction prediction (by model):
 
 ### Local Deployment ✓ (Current)
 ```bash
-python predict.py
+python src/predict.py
 ```
 - Works on Windows/Mac/Linux
 - No server needed
@@ -472,4 +478,4 @@ The Smartphone Addiction Predictor successfully demonstrates:
 
 **Thank you for using the Smartphone Addiction Predictor!** 🎯
 
-For questions or improvements, refer to the README.md or check the code comments in train.py and predict.py.
+For questions or improvements, refer to the README.md or check the code comments in `src/train.py` and `src/predict.py`.

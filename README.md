@@ -50,19 +50,12 @@ smartphone-addiction-predictor/
 ├── notebook/
 │   └── analysis.ipynb           # Data exploration
 ├── docs/
-│   ├── README.md
-│   ├── PROJECT_REPORT.md
-│   ├── FAQ.md
-│   └── INDEX.md
-├── tests/
-│   └── test_model.py
-├── requirements.txt             # Dependencies
-└── LICENSE                      # MIT License
-```
+│   ├── PROJECT_REPORT.md        # Technical report
+│   ├── FAQ.md                   # Common questions
+│   ├── INDEX.md                 # Documentation index
+│   └── PROJECT_STRUCTURE.md     # Structure overview
 ├── requirements.txt             # Dependencies
 ├── README.md                    # This file
-├── PROJECT_REPORT.md            # Technical report
-├── FAQ.md                       # Common questions
 ├── LICENSE                      # MIT License
 └── .gitignore                   # Git configuration
 ```
@@ -213,8 +206,10 @@ This notebook shows:
 
 ## Documentation
 
-- **[PROJECT_REPORT.md](PROJECT_REPORT.md)** - Detailed technical report
-- **[FAQ.md](FAQ.md)** - Frequently asked questions
+- **[PROJECT_REPORT.md](docs/PROJECT_REPORT.md)** - Detailed technical report
+- **[FAQ.md](docs/FAQ.md)** - Frequently asked questions
+- **[INDEX.md](docs/INDEX.md)** - Documentation index
+- **[PROJECT_STRUCTURE.md](docs/PROJECT_STRUCTURE.md)** - Project structure overview
 
 ## Features
 
@@ -270,15 +265,18 @@ The model provides confidence percentages:
 
 ## What Happens Behind the Scenes
 
-### Training (`train.py`)
+### Training (`src/train.py`)
 1. Loads 7,500 people's phone usage data from `data/data.csv`
 2. Cleans and preprocesses the data (handles missing values, encoding)
-3. Next Steps
+3. Selects 12 best features, trains the Random Forest model
+4. Evaluates performance and serializes model artifacts to `models/`
 
-- Modify input prompts in `predict.py` for your specific needs
-- Adjust model hyperparameters in `train.py` to improve accuracy
+## Next Steps
+
+- Modify input prompts in `src/predict.py` for your specific needs
+- Adjust model hyperparameters in `src/train.py` to improve accuracy
 - Explore the dataset in `notebook/analysis.ipynb` to understand patterns
-- See [PROJECT_REPORT.md](PROJECT_REPORT.md) for technical details and deployment guide
+- See [docs/PROJECT_REPORT.md](docs/PROJECT_REPORT.md) for technical details and deployment guide
 
 ## Quick Command Reference
 
@@ -313,28 +311,7 @@ MIT License - Free to use, modify, and distribute. See [LICENSE](LICENSE)
 
 ## Questions?
 
-- Check [PROJECT_REPORT.md](PROJECT_REPORT.md) for technical deep dives
-- Search [FAQ.md](FAQ.md) for common questions
+- Check [docs/PROJECT_REPORT.md](docs/PROJECT_REPORT.md) for technical deep dives
+- Search [docs/FAQ.md](docs/FAQ.md) for common questions
 - Open an issue on GitHub for bug reports
 
-## Technology Stack
-
-- **Python 3.8+** - Programming language
-- **scikit-learn** - Machine learning
-- **pandas** - Data processing
-- **numpy** - Numerical computing
-- **joblib** - Model serialization
-- **Jupyter** - Interactive notebooks
-
-## License
-
-MIT License - Free to use, modify, and distribute. See [LICENSE](LICENSE)
-
-## Project Info
-
-- **Type:** Machine Learning Classification
-- **Status:** Production Ready
-- **Version:** 1.0
-- **Created:** March 2026
-- **Dataset:** 7,500 user profiles
-- **Model:** Random Forest Classifier

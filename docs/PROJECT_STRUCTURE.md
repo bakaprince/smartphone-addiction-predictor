@@ -10,7 +10,7 @@ smartphone-addiction-predictor/
 ├── data/                      # Datasets
 │   └── data.csv              # 7,500 user records
 │
-├── models/                    # Trained models (generated)
+├── models/                    # Trained models (generated after training)
 │   ├── addiction_model.pkl
 │   ├── scaler.pkl
 │   └── features.pkl
@@ -19,16 +19,12 @@ smartphone-addiction-predictor/
 │   └── analysis.ipynb
 │
 ├── docs/                      # Documentation
-│   ├── README.md             # Main guide
 │   ├── PROJECT_REPORT.md     # Technical report
 │   ├── FAQ.md                # Questions & answers
-│   └── INDEX.md              # Documentation index
+│   ├── INDEX.md              # Documentation index
+│   └── PROJECT_STRUCTURE.md  # This file
 │
-├── tests/                     # Unit tests
-│   └── test_model.py         # Model tests
-│
-├── run_train.py              # Entry point: python run_train.py
-├── run_predict.py            # Entry point: python run_predict.py
+├── README.md                 # Main guide (start here)
 ├── requirements.txt          # Python dependencies
 ├── LICENSE                   # MIT License
 └── .gitignore               # Git ignore rules
@@ -38,9 +34,8 @@ smartphone-addiction-predictor/
 
 ```bash
 pip install -r requirements.txt
-python run_train.py       # Train the model
-python run_predict.py     # Make predictions
-python -m pytest tests/   # Run tests
+python src/train.py    # Train the model
+python src/predict.py  # Make predictions
 ```
 
 ## Module Organization
