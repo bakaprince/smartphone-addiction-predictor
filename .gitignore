@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+*.egg
+
+# Virtual Environment
+venv/
+env/
+.venv
+
+# IDE
+.vscode/
+.idea/
+
+# Generated Models
+models/
+*.pkl
+*.joblib
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
