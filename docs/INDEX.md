@@ -42,7 +42,7 @@ Your complete guide to the Smartphone Addiction Predictor project. Start here!
 
 ### Project Info
 
-- **[LICENSE](LICENSE)** - MIT License
+- **[LICENSE](../LICENSE)** - MIT License
   - Free to use and modify
   - Commercial use allowed
   - Attribution appreciated

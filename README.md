@@ -26,10 +26,10 @@ User Inputs:
 pip install -r requirements.txt
 
 # 2. Train the model (first time only)
-python train.py
+python src/train.py
 
 # 3. Make predictions
-python predict.py
+python src/predict.py
 ```
 
 **That's it!** See [Installation](#installation) below for detailed setup steps.
@@ -38,6 +38,9 @@ python predict.py
 
 ```
 smartphone-addiction-predictor/
+├── src/
+│   ├── train.py                 # Model training
+│   └── predict.py               # Interactive predictions
 ├── data/
 │   └── data.csv                 # Dataset with 7500+ records
 ├── models/                       # (Generated after training)
@@ -46,8 +49,16 @@ smartphone-addiction-predictor/
 │   └── features.pkl             # Feature list
 ├── notebook/
 │   └── analysis.ipynb           # Data exploration
-├── train.py                     # Model training
-├── predict.py                   # Interactive predictions
+├── docs/
+│   ├── README.md
+│   ├── PROJECT_REPORT.md
+│   ├── FAQ.md
+│   └── INDEX.md
+├── tests/
+│   └── test_model.py
+├── requirements.txt             # Dependencies
+└── LICENSE                      # MIT License
+```
 ├── requirements.txt             # Dependencies
 ├── README.md                    # This file
 ├── PROJECT_REPORT.md            # Technical report
@@ -104,7 +115,7 @@ pip install -r requirements.txt
 Train the model once using the dataset:
 
 ```bash
-python train.py
+python src/train.py
 ```
 
 **Output:**
@@ -117,7 +128,7 @@ python train.py
 ✅ All cleaned up! Working with 12 important factors
 ...
 ✨ All done! Ready to predict!
-🚀 Next: Run 'python predict.py' to test it out
+🚀 Next: Run 'python src/predict.py' to test it out
 ```
 
 Creates `models/` folder with:
@@ -130,7 +141,7 @@ Creates `models/` folder with:
 Make addiction predictions interactively:
 
 ```bash
-python predict.py
+python src/predict.py
 ```
 
 **Interactive Session:**
@@ -274,8 +285,8 @@ The model provides confidence percentages:
 | Task | Command |
 |------|---------|
 | Install dependencies | `pip install -r requirements.txt` |
-| Train the model | `python train.py` |
-| Make predictions | `python predict.py` |
+| Train the model | `python src/train.py` |
+| Make predictions | `python src/predict.py` |
 | Explore data | `jupyter notebook notebook/analysis.ipynb` |
 
 ## Technology Stack
